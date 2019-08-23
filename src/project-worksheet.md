@@ -29,6 +29,18 @@ makeApiCallYelp = async () => {
 
 ![](https://i.imgur.com/O7rsdE0.jpg)
 
+<h3>MVP/Post MVP
+
+<h5>MVP</h5>
+- create all the components<br>
+- make the API call <br>
+- make methods to update state <br>
+- pass down props
+
+<h5>Post MVP</h5>
+- add a redo button to Footer<br>
+- create a reveal effect for choice 
+
 <h3>Time/Priority Matrix</h3>
 
 
