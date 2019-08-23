@@ -32,7 +32,7 @@ makeApiCallYelp = async () => {
 <h3>Time/Priority Matrix</h3>
 
 |Component| Priority | Estimated Time | Actual Time |
-| ---                 | ---       |||
+| ---                 | ---       |---|---|
 | Adding Header | H | 1hr | .5hr |
 | Adding Main | H | 3hr ||
 | Adding Form | H | 2hr ||
