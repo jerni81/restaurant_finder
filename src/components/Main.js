@@ -8,16 +8,16 @@ class Main extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      choices: [],
-      next: false
+      options: [],
+      toOpts: false
     }
   }
 
-  handleChoices = (e) => {
+  handleOptions = (e) => {
     // console.log('this is handleChoices', e);
     this.setState({
-      choices: e.choices,
-      next: e.next
+      options: e.options,
+      toOpts: e.toOpts
     })
   }
 
@@ -48,17 +48,17 @@ class Main extends React.Component {
   // <Options />
 
   render(){
-        console.log('this is choices', this.state.choices);
+        console.log('this is options', this.state.options);
 
-    if (this.state.next === true) {
-       return <Redirect to='/options' />
+    if (this.state.toOpts === true) {
+       return <Redirect to='/options' render={(props)=><Options options={this.state.options}/>} />
      }
 
     return (
       <div className="App">
       <Switch>
-        <Route to='/options' component={Options} />
-        <Route exact path='/' render={(props)=><Form handleChoices={this.handleChoices}/>}/>
+        <Route path='/options' render={(props)=><Options options={this.state.options}/>} />
+        <Route exact path='/' render={(props)=><Form handleOptions={this.handleOptions}/>}/>
       </Switch>
       </div>
     );

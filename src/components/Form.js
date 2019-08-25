@@ -6,8 +6,8 @@ class Form extends React.Component {
     super(props)
     this.state = {
       value: '',
-      choices: [],
-      next: true
+      options: [],
+      toOpts: true
     }
   }
 
@@ -34,21 +34,20 @@ class Form extends React.Component {
       }
     });
     this.setState({
-      choices: response.data.businesses
-    }, this.updateChoices)
-    // console.log(this.state.choices);
+      options: response.data.businesses
+    }, this.updateOptions)
+    // console.log(this.state.options);
   }
 
-  updateChoices = () => {
+  updateOptions = () => {
     // console.log(this.state);
-    this.props.handleChoices(this.state)
+    this.props.handleOptions(this.state)
   }
 
   render(){
     return(
       <form >
-      <h2>Need some Ideas??</h2>
-      <h3>Where are you?</h3>
+        <h3>Where are you?</h3>
         <input onChange={this.handleChange} placeholder='enter city or zip' />
         <br/>
         <button onClick={this.handleSubmit}>Submit</button>
