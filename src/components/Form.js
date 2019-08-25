@@ -6,7 +6,8 @@ class Form extends React.Component {
     super(props)
     this.state = {
       value: '',
-      choices: []
+      choices: [],
+      next: true
     }
   }
 
@@ -46,6 +47,8 @@ class Form extends React.Component {
   render(){
     return(
       <form >
+      <h2>Need some Ideas??</h2>
+      <h3>Where are you?</h3>
         <input onChange={this.handleChange} placeholder='enter city or zip' />
         <br/>
         <button onClick={this.handleSubmit}>Submit</button>

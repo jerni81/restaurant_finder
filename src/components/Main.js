@@ -1,18 +1,28 @@
 import React from 'react';
-import axios from 'axios'
+// import axios from 'axios'
 import Form from './Form'
+import Options from './Options'
+import { Route, Switch, Redirect } from 'react-router-dom'
 
 class Main extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
       choices: [],
+      next: false
     }
   }
 
   handleChoices = (e) => {
-    console.log('this is handleChoices', e);
+    // console.log('this is handleChoices', e);
+    this.setState({
+      choices: e.choices,
+      next: e.next
+    })
   }
+
+
+
 
 
   // handleSubmit = (e) => {
@@ -32,15 +42,31 @@ class Main extends React.Component {
   //  console.log(response);
   // }
 
+
+
+  // <Form handleChoices={this.handleChoices}/>
+  // <Options />
+
   render(){
+        console.log('this is choices', this.state.choices);
+
+    if (this.state.next === true) {
+       return <Redirect to='/options' />
+     }
+
     return (
       <div className="App">
-        <h2>Need some Ideas??</h2>
-        <h3>Where are you?</h3>
-        <Form handleChoices={this.handleChoices}/>
+      <Switch>
+        <Route to='/options' component={Options} />
+        <Route exact path='/' render={(props)=><Form handleChoices={this.handleChoices}/>}/>
+      </Switch>
       </div>
     );
   }
 }
 
 export default Main;
+
+
+//Redirect from https://tylermcginnis.com/react-router-programmatically-navigate/
+//handleChange format from https://dev.to/zeyadetman/how-to-pass-state-between-components-in-reactjs-2pg1

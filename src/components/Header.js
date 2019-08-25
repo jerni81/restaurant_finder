@@ -1,13 +1,17 @@
 import React from 'react'
 
-const h1Style = {
+const headerStyle = {
   display: 'flex',
-  justifyContent: 'center'
+  justifyContent: 'center',
+  backgroundColor: 'red'
 }
 
 function Header(){
+
+
+
   return(
-    <h1 style={h1Style}>Whats for dinner?</h1>
+    <h1 style={headerStyle}>Whats for dinner?</h1>
   )
 }
 
