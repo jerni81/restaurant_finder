@@ -14,7 +14,7 @@ class Form extends React.Component {
   handleSubmit = e => {
     e.preventDefault();
     this.makeApiCallYelp();
-    console.log("this is submit", this.state.value);
+    // console.log("this is submit", this.state.value);
   };
 
   handleChange = e => {
@@ -39,7 +39,7 @@ class Form extends React.Component {
       },
       this.updateOptions
     );
-    // console.log(this.state.options);
+    console.log('api call',this.state.options);
   };
 
   updateOptions = () => {

@@ -1,5 +1,4 @@
 import React from "react";
-// import axios from 'axios'
 import Form from "./Form";
 import Options from "./Options";
 import { Route, Switch, Redirect } from "react-router-dom";
@@ -23,8 +22,6 @@ class Main extends React.Component {
 
   render() {
     console.log("this is options", this.state.options);
-
-
     return (
       <div className="App">
         <Switch>

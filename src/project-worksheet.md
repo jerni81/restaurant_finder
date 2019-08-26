@@ -5,6 +5,8 @@ The API being used for this project will be the Yelp Fusion V3 API. I will be us
 Link:
 https://api.yelp.com/v3/businesses/search?term=restaurants&location=(user-input)&open_now=true&limit=50
 
+Note: In order to access the API user needs to provide their own API key for this variable REACT_APP_YELP_KEY
+
 Code Sample:
 ```js
 makeApiCallYelp = async () => {
@@ -47,9 +49,9 @@ makeApiCallYelp = async () => {
 | Component| Priority | Estimated Time | Actual Time |
 | --- | --- | --- | --- |
 | Adding Header | H | 1hr | .5hr |
-| Adding Main | H | 3hr | 3hr |
-| Adding Form | H | 2hr | 2hr |
-| Adding Options | H | 3hr ||
+| Adding Main | H | 3hr | 4hr |
+| Adding Form | H | 2hr | 3hr |
+| Adding Options | H | 3hr | 4hr |
 | Adding Choice | H | 2hr ||
 | Adding Footer | L | 1hr ||
 | Working with API | H | 3hr ||
