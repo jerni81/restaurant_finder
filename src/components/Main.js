@@ -54,7 +54,10 @@ class Main extends React.Component {
               }
             }}
           />
-          <Route path="/final" render={props => <Final />} />
+          <Route
+            path="/final"
+            render={props => <Final selected={this.state.selected} />}
+          />
           <Route
             exact
             path="/"

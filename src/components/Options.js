@@ -55,7 +55,7 @@ class Options extends React.Component {
 
     return (
       <div className="container">
-        <h1>This is options</h1>
+        <h1>Pick 4 that sound ok and we'll make the final choice for you!!</h1>
         <div>{theOptions}</div>
         <h1>Selected</h1>
         <div>{theSelected}</div>
