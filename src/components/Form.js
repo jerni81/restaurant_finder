@@ -33,13 +33,29 @@ class Form extends React.Component {
         Authorization: `Bearer ${key}`
       }
     });
+
+    function shuffle(array) {
+      var m = array.length,
+        t,
+        i;
+      while (m) {
+        i = Math.floor(Math.random() * m--);
+        t = array[m];
+        array[m] = array[i];
+        array[i] = t;
+      }
+      return array;
+    }
+
+    shuffle(response.data.businesses);
+
     this.setState(
       {
         options: response.data.businesses
       },
       this.updateOptions
     );
-    console.log('api call',this.state.options);
+    // console.log('api call',this.state.options);
   };
 
   updateOptions = () => {
