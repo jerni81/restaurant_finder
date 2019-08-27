@@ -48,7 +48,7 @@ class Options extends React.Component {
     const theOptions = this.props.options.map((d, i) => {
       if (i < 8) {
         return (
-          <div key={i} className="optionsDiv">
+          <div key={i} className="optionDiv">
             <h3>{d.name}</h3>
             <p>{d.categories[0].title}</p>
             <button onClick={this.handleSelection} value={d.name}>
@@ -67,7 +67,7 @@ class Options extends React.Component {
       <div className="optionsContainer">
         <div>
           <h1>Choose 4</h1>
-          <div>{theOptions}</div>
+          <div className="optionsDiv">{theOptions}</div>
         </div>
         <div className=" selectedDiv">
           <h1>Selected</h1>
