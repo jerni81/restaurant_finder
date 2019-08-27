@@ -49,14 +49,14 @@ makeApiCallYelp = async () => {
 | Component| Priority | Estimated Time | Actual Time |
 | --- | --- | --- | --- |
 | Adding Header | H | 1hr | .5hr |
-| Adding Main | H | 3hr | 4hr |
+| Adding Main | H | 3hr | 5hr |
 | Adding Form | H | 2hr | 3hr |
 | Adding Options | H | 3hr | 4hr |
-| Adding Choice | H | 2hr ||
+| Adding Choice | H | 2hr | 2.5hr |
 | Adding Footer | L | 1hr ||
-| Working with API | H | 3hr ||
+| Working with API | H | 3hr | 3hr |
 | Styling Components | L | 4hr ||
-| Total | H | 19hr ||
+| Total | H | 19hr | 16hrs |
 
 <h3>Components</h3>
 
