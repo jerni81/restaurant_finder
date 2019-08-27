@@ -67,9 +67,11 @@ class Form extends React.Component {
     return (
       <form>
         <h3>Where are you?</h3>
-        <input onChange={this.handleChange} placeholder="enter city or zip" />
-        <br />
-        <button onClick={this.handleSubmit}>Submit</button>
+        <div className="formdiv">
+          <input onChange={this.handleChange} placeholder="enter city or zip" />
+          <br />
+          <button onClick={this.handleSubmit}>Show Me Options</button>
+        </div>
       </form>
     );
   }

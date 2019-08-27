@@ -38,12 +38,16 @@ class Final extends React.Component {
 
     const finalChoice = this.state.newSelected.map((d, i) => {
       if (i < 1) {
-        return <div key={i}>{d}</div>;
+        return (
+          <div key={i} className="finalDiv">
+            {d}
+          </div>
+        );
       }
     });
 
     return (
-      <div>
+      <div className="finalContainer">
         <h1>Final</h1>
         {finalChoice}
         <h1>Lets Go Eat</h1>

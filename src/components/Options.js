@@ -17,9 +17,18 @@ class Options extends React.Component {
   handleSelection = e => {
     console.log("this is selection", e.target.value);
     let choice = e.target.value;
-    this.setState((prevState, props) => ({
-      selected: [...prevState.selected, choice]
-    }));
+    if (this.state.selected.includes(choice)) {
+      const filtered = this.state.selected.filter(
+        restuarant => restuarant !== choice
+      );
+      this.setState({
+        selected: filtered
+      });
+    } else {
+      this.setState((prevState, props) => ({
+        selected: [...prevState.selected, choice]
+      }));
+    }
   };
 
   componentDidUpdate(prevState) {
@@ -39,8 +48,9 @@ class Options extends React.Component {
     const theOptions = this.props.options.map((d, i) => {
       if (i < 8) {
         return (
-          <div key={i}>
-            <p>{d.name}</p>
+          <div key={i} className="optionsDiv">
+            <h3>{d.name}</h3>
+            <p>{d.categories[0].title}</p>
             <button onClick={this.handleSelection} value={d.name}>
               select
             </button>
@@ -54,11 +64,15 @@ class Options extends React.Component {
     });
 
     return (
-      <div className="container">
-        <h1>Pick 4 that sound ok and we'll make the final choice for you!!</h1>
-        <div>{theOptions}</div>
-        <h1>Selected</h1>
-        <div>{theSelected}</div>
+      <div className="optionsContainer">
+        <div>
+          <h1>Choose 4</h1>
+          <div>{theOptions}</div>
+        </div>
+        <div className=" selectedDiv">
+          <h1>Selected</h1>
+          <div>{theSelected}</div>
+        </div>
       </div>
     );
   }
