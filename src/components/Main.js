@@ -2,6 +2,7 @@ import React from "react";
 import Form from "./Form";
 import Options from "./Options";
 import Final from "./Final";
+
 import { Route, Switch, Redirect } from "react-router-dom";
 
 class Main extends React.Component {

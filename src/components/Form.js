@@ -1,4 +1,5 @@
 import React from "react";
+import BackupAPI from "./backup";
 import axios from "axios";
 
 class Form extends React.Component {
@@ -14,6 +15,7 @@ class Form extends React.Component {
   handleSubmit = e => {
     e.preventDefault();
     this.makeApiCallYelp();
+
     // console.log("this is submit", this.state.value);
   };
 
@@ -28,34 +30,43 @@ class Form extends React.Component {
   makeApiCallYelp = async () => {
     let source = `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=restaurants&location=${this.state.value}&open_now=true&limit=50`;
     let key = process.env.REACT_APP_YELP_KEY;
-    let response = await axios.get(source, {
-      headers: {
-        Authorization: `Bearer ${key}`
+    try {
+      let response = await axios.get(source, {
+        headers: {
+          Authorization: `Bearer ${key}`
+        }
+      });
+      function shuffle(array) {
+        var m = array.length,
+          t,
+          i;
+        while (m) {
+          i = Math.floor(Math.random() * m--);
+          t = array[m];
+          array[m] = array[i];
+          array[i] = t;
+        }
+        return array;
       }
-    });
 
-    function shuffle(array) {
-      var m = array.length,
-        t,
-        i;
-      while (m) {
-        i = Math.floor(Math.random() * m--);
-        t = array[m];
-        array[m] = array[i];
-        array[i] = t;
-      }
-      return array;
+      shuffle(response.data.businesses);
+
+      this.setState(
+        {
+          options: response.data.businesses
+        },
+        this.updateOptions
+      );
+      console.log("api call", this.state.options);
+    } catch (err) {
+      console.log("this is err", err);
+      this.setState(
+        {
+          options: BackupAPI
+        },
+        this.updateOptions
+      );
     }
-
-    shuffle(response.data.businesses);
-
-    this.setState(
-      {
-        options: response.data.businesses
-      },
-      this.updateOptions
-    );
-    // console.log('api call',this.state.options);
   };
 
   updateOptions = () => {

@@ -46,12 +46,17 @@ class Options extends React.Component {
     console.log("this is selected", this.state.selected);
 
     const theOptions = this.props.options.map((d, i) => {
+      let selected = this.state.selected.includes(d.name);
       if (i < 8) {
         return (
           <div key={i} className="optionDiv">
             <h3>{d.name}</h3>
             <p>{d.categories[0].title}</p>
-            <button onClick={this.handleSelection} value={d.name}>
+            <button
+              onClick={this.handleSelection}
+              value={d.name}
+              className={selected ? "selected" : ""}
+            >
               select
             </button>
           </div>
