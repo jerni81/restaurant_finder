@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/restaurant_finder/static/css/main.79035d10.chunk.css",
+    "main.js": "/restaurant_finder/static/js/main.22e118b0.chunk.js",
+    "main.js.map": "/restaurant_finder/static/js/main.22e118b0.chunk.js.map",
+    "runtime~main.js": "/restaurant_finder/static/js/runtime~main.8bbb4c67.js",
+    "runtime~main.js.map": "/restaurant_finder/static/js/runtime~main.8bbb4c67.js.map",
+    "static/js/2.855cee18.chunk.js": "/restaurant_finder/static/js/2.855cee18.chunk.js",
+    "static/js/2.855cee18.chunk.js.map": "/restaurant_finder/static/js/2.855cee18.chunk.js.map",
+    "index.html": "/restaurant_finder/index.html",
+    "precache-manifest.3152d305bfdd6c07be2352d89d68dccc.js": "/restaurant_finder/precache-manifest.3152d305bfdd6c07be2352d89d68dccc.js",
+    "service-worker.js": "/restaurant_finder/service-worker.js",
+    "static/css/main.79035d10.chunk.css.map": "/restaurant_finder/static/css/main.79035d10.chunk.css.map"
+  }
+}
