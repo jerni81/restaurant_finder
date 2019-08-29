@@ -31,15 +31,12 @@ class Options extends React.Component {
     }
   };
 
-  componentDidUpdate(prevState) {
-    console.log("this is compDidUpdate,", this.state.selected);
-    if (this.state.selected.length === 4 && this.state.toFinal === true) {
-      this.setState({
-        toFinal: false
-      });
-      this.updateSelected();
-    }
-  }
+  submitChoices = () => {
+    this.setState({
+      toFinal: false
+    });
+    this.updateSelected();
+  };
 
   render() {
     // console.log("this is options page", this.props.options);
@@ -74,7 +71,8 @@ class Options extends React.Component {
           <h1>Choose 4</h1>
           <div className="optionsDiv">{theOptions}</div>
         </div>
-        <div className=" selectedDiv">
+        <button onClick={this.submitChoices}>submit</button>
+        <div className="selectedDiv">
           <h1>Selected</h1>
           <div>{theSelected}</div>
         </div>

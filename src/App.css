@@ -147,6 +147,12 @@ h1 {
     justify-content: center;
   }
 
+  .optionsContainer button {
+    align-self: center;
+    margin-bottom: 0;
+    width: 100px;
+  }
+
   .optionsDiv {
     display: flex;
     flex-flow: row wrap;

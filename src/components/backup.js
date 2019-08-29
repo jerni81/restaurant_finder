@@ -1,12 +1,12 @@
 const BackupAPI = [
-  { name: "Ben Blocker", categories: "G" },
-  { name: "Dave Defender", categories: "D" },
-  { name: "Sam Sweeper", categories: "D" },
-  { name: "Matt Midfielder", categories: ["M", "j"] },
-  { name: "William Winger", categories: "M" },
-  { name: "William Winger", categories: "M" },
-  { name: "William Winger", categories: "M" },
-  { name: "Fillipe Forward", categories: "F" }
+  { name: "Busters BBQ", categories: [{ title: "BBQ" }] },
+  { name: "The Onion", categories: [{ title: "American Fare" }] },
+  { name: "Selkirks", categories: [{ title: "Pizza" }] },
+  { name: "World of Beer", categories: [{ title: "Pub Food" }] },
+  { name: "Sanfords", categories: [{ title: "Seafood" }] },
+  { name: "Mongolian Grill", categories: [{ title: "Mongolian" }] },
+  { name: "AJ's Catfish", categories: [{ title: "Seafood" }] },
+  { name: "Fudruckers", categories: [{ title: "Burgers" }] }
 ];
 
 export default BackupAPI;

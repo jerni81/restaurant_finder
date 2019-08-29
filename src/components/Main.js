@@ -36,7 +36,7 @@ class Main extends React.Component {
   render() {
     // console.log('this is Main - props', this.props)
     // console.log("this is options", this.state.options);
-    console.log("yo yo ", this.state);
+    // console.log("yo yo ", this.state);
     return (
       <div className="App">
         <Switch>

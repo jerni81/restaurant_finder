@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class Final extends React.Component {
   constructor(props) {
@@ -51,6 +52,11 @@ class Final extends React.Component {
         <h1>Final</h1>
         {finalChoice}
         <h1>Lets Go Eat</h1>
+        <footer>
+          <Link to="/">
+            <button>Start over if your really indecisive</button>
+          </Link>
+        </footer>
       </div>
     );
   }
