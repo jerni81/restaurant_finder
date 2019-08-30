@@ -71,13 +71,11 @@ input {
   align-items: center;
   background-color: rgba(0,0,0,.5);
   color: white;
-  margin: 5%;
-  margin-top: 0;
-  margin-bottom: 0;
-  height: 150px;
+  margin: 3% 5%;
 }
 
 .optionsDiv button {
+  margin-bottom: 25px;
   width: 50px;
 }
 
