@@ -71,7 +71,7 @@ class Options extends React.Component {
           <h1>Choose a few that sound good!</h1>
           <div className="optionsDiv">{theOptions}</div>
         </div>
-        <div className='selectButton'>
+        <div className="selectButton">
           <button onClick={this.submitChoices}>Submit Choices</button>
           <div className="selectedDiv">
             <h1>Selected</h1>
