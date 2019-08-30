@@ -77,7 +77,8 @@ class Form extends React.Component {
   render() {
     return (
       <form>
-        <h3>Where are you?</h3>
+        <h3>Don't know where to go?</h3>
+        <h5>Tell us where you are,<br/> and we'll give you some suggestions!!</h5>
         <div className="formdiv">
           <input onChange={this.handleChange} placeholder="enter city or zip" />
           <br />

@@ -40,8 +40,8 @@ class Final extends React.Component {
     const finalChoice = this.state.newSelected.map((d, i) => {
       if (i < 1) {
         return (
-          <div key={i} className="finalDiv">
-            {d}
+          <div key={i}>
+            <h3>{d}</h3>
           </div>
         );
       }
@@ -49,12 +49,12 @@ class Final extends React.Component {
 
     return (
       <div className="finalContainer">
-        <h1>Final</h1>
-        {finalChoice}
-        <h1>Lets Go Eat</h1>
+        <h1>This one sounds good!</h1>
+        <div className="finalDiv">{finalChoice}</div>
+        <h1>There decision made, Now Go Eat!!</h1>
         <footer>
           <Link to="/">
-            <button>Start over if your really indecisive</button>
+            <button>Start over if you're really indecisive</button>
           </Link>
         </footer>
       </div>

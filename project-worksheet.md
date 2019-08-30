@@ -1,3 +1,12 @@
+<h3>Project Description</h3>
+
+This is the app that will get you out to dinner quicker if your indecisive and cant decide where to go. if you supply you location the app with pull information from yelp to get 50 restaurants within your area. Out of those 50 the choices will be randomly narrowed down to 8 and presented as possible choices. The user then selects any number of the choices and submits them for a final decision which is then generated for you.
+
+<h3>Projects Links</h3>
+
+- [github repo](https://github.com/jerni81/restaurant_finder)
+- [deployment](http://ajs-restaurant-finder.surge.sh/)
+
 <h3>API Info</h3>
 
 The API being used for this project will be the Yelp Fusion V3 API. I will be using this API to retrieve restaurants in a certain city or area code that the user suggest.
@@ -49,14 +58,14 @@ makeApiCallYelp = async () => {
 | Component| Priority | Estimated Time | Actual Time |
 | --- | --- | --- | --- |
 | Adding Header | H | 1hr | .5hr |
-| Adding Main | H | 3hr | 5hr |
-| Adding Form | H | 2hr | 3hr |
+| Adding Main | H | 3hr | 6hr |
+| Adding Form | H | 2hr | 6hr |
 | Adding Options | H | 3hr | 5hr |
-| Adding Choice | H | 2hr | 2.5hr |
-| Adding Footer | L | 1hr ||
+| Adding Choice | H | 2hr | 3hr |
+| Adding Footer | L | 1hr |. 5 hr|
 | Working with API | H | 3hr | 3hr |
-| Styling Components | L | 4hr | 6hr |
-| Total | H | 19hr | 23hrs |
+| Styling Components | L | 4hr | 8hr |
+| Total | H | 19hr | 32hrs |
 
 <h3>Components</h3>
 

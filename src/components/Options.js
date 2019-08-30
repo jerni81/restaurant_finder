@@ -68,13 +68,15 @@ class Options extends React.Component {
     return (
       <div className="optionsContainer">
         <div>
-          <h1>Choose 4</h1>
+          <h1>Choose a few that sound good!</h1>
           <div className="optionsDiv">{theOptions}</div>
         </div>
-        <button onClick={this.submitChoices}>submit</button>
-        <div className="selectedDiv">
-          <h1>Selected</h1>
-          <div>{theSelected}</div>
+        <div className='selectButton'>
+          <button onClick={this.submitChoices}>Submit Choices</button>
+          <div className="selectedDiv">
+            <h1>Selected</h1>
+            <div>{theSelected}</div>
+          </div>
         </div>
       </div>
     );

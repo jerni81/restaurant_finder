@@ -4,29 +4,10 @@
   text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
 
 body {
   background-image: url('https://ak8.picdn.net/shutterstock/videos/24263918/thumb/1.jpg');
@@ -41,6 +22,7 @@ body {
   justify-content: center;
   font-family: 'Bree Serif', serif;
   background-color: rgba(255,10,10,.7);
+
 }
 
 form {
@@ -90,21 +72,31 @@ input {
   background-color: rgba(0,0,0,.5);
   color: white;
   margin: 5%;
+  margin-top: 0;
+  margin-bottom: 0;
   height: 150px;
 }
 
 .optionsDiv button {
-
   width: 50px;
 }
 
-.selectedDiv {
-  font-family: 'Bree Serif', serif;
-  background-color: rgba(0,0,0,1);
-  color: white;
-  position: sticky;
-  top: 0;
-  margin: 5%;
+.selectButton button {
+  margin-bottom: 0;
+}
+
+.selectButton {font-family: 'Bree Serif', serif;
+background-color: rgba(0,0,0,1);
+color: white;
+position: sticky;
+top: 0;
+margin: 5%;
+margin-top: 0%;
+padding-top: 1%
+}
+
+.selected {
+  border: 3px solid red;
 }
 
 h1 {
@@ -179,20 +171,29 @@ h1 {
   .optionDiv button {
     margin-bottom: 10px;
   }
+
+  .selectButton{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0,0,0,.5);
+    margin: 5%;
+    margin-top: 0%;
+    padding-top: 1%
+  }
+
   .selectedDiv {
     display: flex;
     justify-content: space-between;
-    font-family: 'Bree Serif', serif;
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0,0,0,0);
     color: white;
     position: sticky;
     top: 0;
-    margin: 5%;
-    margin-top: 0;
+    margin-top: 1%;
   }
 
   .selectedDiv h1 {
     width: 49%;
+    background-color: rgba(0, 0, 0, 0);
   }
 
   .selectedDiv div {
@@ -200,13 +201,38 @@ h1 {
     margin: 0 auto;
   }
 
-  .selected {
-    border: 3px solid red;
-  }
+
 
 }
 
 /*laptop/desktop*/
 @media (min-width: 992px) {
+ .header {
+   margin: 2% 5%;
+   overflow: hidden;
+ }
+
+  .formDiv {
+    margin-bottom: 2%;
+    height: inherit;
+    overflow: hidden;
+  }
+
+  .optionsContainer {
+    overflow: hidden;
+  }
+
+  .optionsContainer h1{
+    margin: 0% 5%;
+  }
+
+  .optionsDiv {
+    margin: 0% 5%;
+  }
+
+  .finalDiv {
+    height: 40vh;
+    width: 500px;
+  }
 
 }
